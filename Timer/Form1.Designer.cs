@@ -28,21 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.txtNum = new System.Windows.Forms.TextBox();
+            this.txtCountDown = new System.Windows.Forms.TextBox();
+            this.btnCount = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // Timer
+            // 
+            this.Timer.Interval = 1000;
+            // 
+            // txtNum
+            // 
+            this.txtNum.Location = new System.Drawing.Point(12, 12);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(223, 21);
+            this.txtNum.TabIndex = 0;
+            this.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtCountDown
+            // 
+            this.txtCountDown.Location = new System.Drawing.Point(12, 252);
+            this.txtCountDown.Name = "txtCountDown";
+            this.txtCountDown.ReadOnly = true;
+            this.txtCountDown.Size = new System.Drawing.Size(223, 21);
+            this.txtCountDown.TabIndex = 1;
+            this.txtCountDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnCount
+            // 
+            this.btnCount.Location = new System.Drawing.Point(13, 39);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(223, 207);
+            this.btnCount.TabIndex = 2;
+            this.btnCount.Text = "COUNT DOWN";
+            this.btnCount.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 367);
+            this.ClientSize = new System.Drawing.Size(253, 285);
+            this.Controls.Add(this.btnCount);
+            this.Controls.Add(this.txtCountDown);
+            this.Controls.Add(this.txtNum);
+            this.Font = new System.Drawing.Font("나눔바른고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Timer";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.TextBox txtCountDown;
+        private System.Windows.Forms.Button btnCount;
     }
 }
 
