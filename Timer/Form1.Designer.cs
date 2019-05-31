@@ -38,6 +38,7 @@
             // Timer
             // 
             this.Timer.Interval = 1000;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // txtNum
             // 
@@ -64,6 +65,7 @@
             this.btnCount.TabIndex = 2;
             this.btnCount.Text = "COUNT DOWN";
             this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.BtnCount_Click);
             // 
             // Form1
             // 
